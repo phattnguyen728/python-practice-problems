@@ -11,16 +11,17 @@
 # Write out some pseudocode before trying to solve the
 # problem to get a good feel for how to solve it.
 
+
 def find_second_largest(values):
-    if len(values) <= 1:                                # solution
-        return None                                     # solution
-    largest = values[0]                                 # solution
-    second_largest = values[0]                          # solution
-    for value in values:                                # solution
-        if value > largest:                             # solution
-            second_largest = largest                    # solution
-            largest = value                             # solution
-        elif value > second_largest:                    # solution
-            second_largest = value                      # solution
-    return second_largest                               # solution
-    # pass                                              # problem
+    if len(values) <= 1:
+        return None
+    max_value = values[0]
+    second_largest = None
+    for value in values[1:]:
+        if value > max_value:
+            second_largest = max_value
+            max_value = value
+        elif second_largest is None or value > second_largest:
+            second_largest = value
+    return second_largest
+
