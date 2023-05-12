@@ -11,4 +11,11 @@
 # If the list is empty, then return the empty string.
 
 def remove_duplicate_letters(s):
-    pass
+    if s == "":
+        return ""
+    else:
+        return list(set(s))
+#join
+
+
+print(remove_duplicate_letters("abca"))

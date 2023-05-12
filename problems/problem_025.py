@@ -7,4 +7,14 @@
 #
 
 def calculate_sum(values):
-    pass
+    sum = 0
+    if len(values) == 0:
+        return None
+    for num in values:
+        sum += num
+    return sum
+
+
+
+
+print(calculate_sum([1, 1, 1, 1, 1, 1]))

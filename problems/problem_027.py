@@ -5,4 +5,13 @@
 #
 
 def max_in_list(values):
-    pass
+    if len(values) == 0:
+        return None
+    mv = values[0]
+    for blah in values:
+        if blah > mv:
+            mv = blah
+    return mv
+
+
+print(max_in_list([11, 22, 33, 55]))
