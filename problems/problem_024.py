@@ -8,4 +8,16 @@
 # Pseudocode is available for you
 
 def calculate_average(values):
-    pass
+    if len(values) == 0:
+        return None
+    total = 0
+    for item in values:
+        #total = total + item
+        total += item
+    return total / len(values)
+
+
+
+
+
+print(calculate_average([1, 4, 1]))
