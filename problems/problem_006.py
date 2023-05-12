@@ -10,4 +10,9 @@
 # problem to get a good feel for how to solve it.
 
 def can_skydive(age, has_consent_form):
-    pass
+    if age >= 18 and has_consent_form == 'yes':
+        return 'You can go skydiving'
+    else:
+        return "You're out of luck, come back in a few years"
+
+print(can_skydive(18, "yes"))
