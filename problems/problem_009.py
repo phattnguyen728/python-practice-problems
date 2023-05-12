@@ -13,4 +13,10 @@
 # problem to get a good feel for how to solve it.
 
 def is_palindrome(word):
-    pass
+    if list(word) == list(reversed(word)):
+        return f"{word} is a Palindrome"
+    else:
+        return f"{word} is not a Palinedrome"
+
+print(is_palindrome("racecar"))
+print(is_palindrome("dafdfasdf"))
