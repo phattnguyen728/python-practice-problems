@@ -35,3 +35,28 @@
 
     # method get_total(self)
         # return self.get_subtotal() * (1 + self.tax_rate)
+from problem_079 import ReceiptItem
+class Receipt:
+    def __init__(self, tax_rate):
+        self.tax_rate = tax_rate
+        self.items = []
+
+    def add_item(self, add_item):
+        self.items.append(add_item)
+
+    def get_subtotal(self):
+        sub_total = 0
+        for item in self.items:
+            sub_total += item.get_total()
+        return sub_total
+
+    def get_total(self):
+        return self.get_subtotal() * (1 + self.tax_rate)
+
+
+item = Receipt(.1)
+item.add_item(ReceiptItem(4, 2.50))
+item.add_item(ReceiptItem(2, 5.00))
+#
+print(item.get_subtotal())     # Prints 20
+print(item.get_total())        # Prints 22

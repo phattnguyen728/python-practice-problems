@@ -1,3 +1,21 @@
+class Person:
+    def __init__(self, name, hated_foods, loved_foods):
+        self.name = name
+        self.hated_foods = hated_foods
+        self.loved_foods = loved_foods
+
+    def taste(self, food_name):
+        if food_name in self.hated_foods:
+            return False
+        if food_name in self.loved_foods:
+            return True
+        else:
+            return None
+
+person = Person("Malik", ["cottage cheese", "sauerkraut"], ["pizza", "schnitzel"])
+print(person.taste("lasagna"))     # Prints None, not in either list
+print(person.taste("sauerkraut"))  # Prints False, in the hated list
+print(person.taste("pizza"))       # Prints True, in the loved list
 # Write a class that meets these requirements.
 #
 # Name:       Person
@@ -26,5 +44,3 @@
 #
 # Do it without pseudocode, this time, from memory. Don't look
 # at the last one you just wrote unless you really must.
-
-

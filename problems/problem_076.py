@@ -14,7 +14,19 @@ class BankAccount:
     def withdraw(self, amount):
         # If the amount is more than what is in
         # the balance, then raise a ValueError
-        self.balance -= amount
+        if amount > self.balance:
+            raise ValueError
+        else:
+            self.balance -= amount
 
     def deposit(self, amount):
         self.balance += amount
+
+account = BankAccount(100)
+print(account.get_balance())
+account.withdraw(200)
+print(account.get_balance())
+account.deposit(200)
+print(account.get_balance())
+account.withdraw(50)
+print(account.get_balance())

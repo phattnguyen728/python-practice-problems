@@ -1,3 +1,24 @@
+class BankAccount:
+    def __init__(self, balance):
+        self.balance = balance
+
+    def get_balance(self):
+        return self.balance
+
+    def deposit(self, amount):
+        self.balance += amount
+
+    def withdraw(self, amount):
+        self.balance -= amount
+
+account = BankAccount(100)
+#
+print(account.get_balance())  # prints 100
+account.withdraw(50)
+print(account.get_balance())  # prints 50
+account.deposit(120)
+print(account.get_balance())  # prints 170
+#
 # Write a class that meets these requirements.
 #
 # Name:       BankAccount
