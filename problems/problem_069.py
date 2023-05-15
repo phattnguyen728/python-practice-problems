@@ -1,3 +1,28 @@
+class Student:
+    def __init__(self, name):
+        self.name = name
+        self.scores = []
+
+    def add_scores(self, score):
+        self.scores.append(score)
+        #return self.scores.append(score)
+        # print(self.scores)
+
+    def get_average(self):
+
+        if len(self.scores) == 0:
+            return None
+        else:
+            return sum(self.scores) / len(self.scores)
+a = Student("Phat")
+print(a.get_average())
+a.add_scores(70)
+print(a.get_average())
+a.add_scores(80)
+print(a.get_average())
+a.add_scores(90)
+print(a.get_average())
+
 # Write a class that meets these requirements.
 #
 # Name:       Student
