@@ -24,4 +24,12 @@
 #     result: "   19"
 
 def pad_left(number, length, pad):
-    pass
+    result = str(number)
+    while len(result) < length:
+        result = pad + result
+    return result
+
+print(pad_left(10, 4, "*"))
+print(pad_left(10, 5, "0"))
+print(pad_left(1000, 3, "0"))
+print(pad_left(19, 5, " "))

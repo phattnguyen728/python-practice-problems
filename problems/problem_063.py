@@ -9,15 +9,31 @@
 # they would get replaced by "A" or "a", respectively.
 #
 # Examples:
-#     * inputs:  "import"
+inputs1 = "import"
 #       result:  "jnqpsu"
-#     * inputs:  "ABBA"
+inputs2 = "ABBA"
 #       result:  "BCCB"
-#     * inputs:  "Kala"
+inputs3 = "Kala"
 #       result:  "Lbmb"
-#     * inputs:  "zap"
+inputs4 = "zap"
 #       result:  "abq"
 #
 # You may want to look at the built-in Python functions
 # "ord" and "chr" for this problem
 
+def next_letter(word):
+    new_word = ""
+    for letter in word:
+        if letter == "Z":
+            new_letter = "A"
+        elif letter == "z":
+            new_letter = "a"
+        else:
+            new_letter = chr(ord(letter) + 1)
+        new_word += new_letter
+    return new_word
+
+print(next_letter(inputs1))
+print(next_letter(inputs2))
+print(next_letter(inputs3))
+print(next_letter(inputs4))

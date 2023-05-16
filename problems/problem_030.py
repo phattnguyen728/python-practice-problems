@@ -12,4 +12,31 @@
 # problem to get a good feel for how to solve it.
 
 def find_second_largest(values):
-    pass
+    # if len(values) == 0 or len(values) == 1:
+    if len(values) > 1:
+        return sorted(values, reverse = True)[1]
+    else:
+        return None
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a = []
+print(find_second_largest(a))
+
+
+
+c = [24, 45, 78, 55, 35, 22]
+print(find_second_largest(c))

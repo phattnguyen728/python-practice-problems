@@ -7,11 +7,16 @@
 #
 # Examples:
 #     input:
-#       parameter 1: 3
-#       parameter 2: 10
+parameter2 = 10
+parameter1 = 3
 #     returns: "310"
 #     input:
-#       parameter 1: 9238
-#       parameter 2: 0
+parameter3 = 9238
+parameter4 = 0
 #     returns: "92380"
 
+def num_concat(a, b):
+    return str(a) + str(b)
+
+print(num_concat(parameter1,parameter2))
+print(num_concat(parameter3,parameter4))

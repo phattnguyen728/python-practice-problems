@@ -13,12 +13,25 @@
 # In the items in the input, there will only be one comma.
 #
 # Examples:
-#     * input:   ["San Antonio, TX"]
+input1 = ["San Antonio, TX"]
 #       returns: {"TX": ["San Antonio"]}
-#     * input:   ["Springfield, MA", "Boston, MA"]
+input2 = ["Springfield, MA", "Boston, MA"]
 #       returns: {"MA": ["Springfield", "Boston"]}
-#     * input:   ["Cleveland, OH", "Columbus, OH", "Chicago, IL"]
+input3 = ["Cleveland, OH", "Columbus, OH", "Chicago, IL"]
 #       returns: {"OH": ["Cleveland", "Columbus"], "IL": ["Chicago"]}
 #
 # You may want to look up the ".strip()" method for the string.
 
+def group_cities_by_state(input):
+    result = {}
+    for city in input:
+        name, state = city.split(",")
+        state = state.strip()
+        if state not in result:
+            result[state] = []
+        result[state].append(name)
+    return result
+
+print(group_cities_by_state(input1))
+print(group_cities_by_state(input2))
+print(group_cities_by_state(input3))

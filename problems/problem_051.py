@@ -7,3 +7,13 @@
 #
 # Don't for get to import math!
 
+import math
+
+def safe_divide(a, b):
+    if b == 0:
+        return math.inf
+    else:
+        return a / b
+
+print(safe_divide(5, 4))
+print(safe_divide(5, 0))

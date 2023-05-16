@@ -23,3 +23,18 @@
 #     * inputs:  10, "/", 12
 #       result:  0.8333333333333334
 
+def basic_calc(left, op, right):
+    if op == "+":
+        return left + right
+    if op == "-":
+        return left - right
+    if op == "/":
+        return left / right
+    if op == "*":
+        return left * right
+
+
+print(basic_calc(10, "+", 12))
+print(basic_calc(10, "-", 12))
+print(basic_calc(10, "/", 12))
+print(basic_calc(10, "*", 12))

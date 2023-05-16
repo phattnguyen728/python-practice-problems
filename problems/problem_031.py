@@ -14,4 +14,16 @@
 # problem to get a good feel for how to solve it.
 
 def sum_of_squares(values):
-    pass
+    if len(values) <= 1:
+        return None
+    result = 0
+    for x in values:
+        result += x * x
+    return result
+
+
+print(sum_of_squares([]))
+print(sum_of_squares([3]))
+
+print(sum_of_squares([1, 2, 3] ))
+print(sum_of_squares([-1, 0, 1]))

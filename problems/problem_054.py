@@ -8,10 +8,17 @@
 #             just return the value of the parameter
 #
 # Examples
-#    * input:   3
+input1 = 3
 #      returns: 3
-#    * input:   "this is a string"
+input2 = "this is a string"
 #      returns: "this is a string"
-#    * input:   "raise"
+input3 = "raise"
 #      RAISES:  ValueError
 
+def check_input(input):
+    if input == "raise":
+      raise ValueError
+    return input
+print(input1)
+print(input2)
+print(input3)

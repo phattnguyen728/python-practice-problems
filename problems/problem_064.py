@@ -12,4 +12,14 @@
 #     * inputs:  highs: [80, 81, 75, 80]
 #                lows:  [72, 78, 70, 70]
 #       result:         [ 8,  3,  5, 10]
+highs = [80, 81, 75, 80]
+lows = [72, 78, 70, 70]
 
+
+def temp_diff(highs, lows):
+    diff = []
+    for high, low, in zip(highs, lows):
+        diff.append(high - low)
+    return diff
+
+print(temp_diff(highs, lows))

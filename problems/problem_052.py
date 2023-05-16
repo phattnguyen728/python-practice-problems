@@ -15,3 +15,11 @@
 #
 # https://docs.python.org/3/library/random.html
 
+import random
+
+def gen_lottery_num():
+    ticket = list(range(1, 41))
+    random.shuffle(ticket)
+    return ticket[0:6]
+
+print(gen_lottery_num())

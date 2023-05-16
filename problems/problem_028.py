@@ -18,4 +18,7 @@ def remove_duplicate_letters(s):
 #join
 
 
-print(remove_duplicate_letters("abca"))
+print(remove_duplicate_letters("abc"))
+print(remove_duplicate_letters("abcabc"))
+print(remove_duplicate_letters("abccba"))
+print(remove_duplicate_letters("abccbad"))

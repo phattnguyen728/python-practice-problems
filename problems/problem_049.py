@@ -9,3 +9,7 @@
 #      y: 4
 #      result: 7
 
+def sum(a, b):
+    return a + b
+
+print(sum(3, 4))

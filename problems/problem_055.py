@@ -7,24 +7,49 @@
 #             parameter value
 #
 # All examples
-#     * input: 1
+input1 = 1
 #       returns: "I"
-#     * input: 2
+input2 = 2
 #       returns: "II"
-#     * input: 3
+input3 = 3
 #       returns: "III"
-#     * input: 4
+input4 = 4
 #       returns: "IV"
-#     * input: 5
+input5 = 5
 #       returns: "V"
-#     * input: 6
+input6 = 6
 #       returns: "VI"
-#     * input: 7
+input7 = 7
 #       returns: "VII"
-#     * input: 8
+input8 = 8
 #       returns: "VIII"
-#     * input: 9
+input9 = 9
 #       returns: "IX"
-#     * input: 10
+input10 = 10
 #       returns:  "X"
 
+def simple_roman(input):
+    convert_to_roman = {
+        1: "I",
+        2: "II",
+        3: "III",
+        4: "IV",
+        5: "V",
+        6: "VI",
+        7: "VII",
+        8: "VIII",
+        9: "IX",
+        10: "X"
+    }
+    return convert_to_roman[input]
+
+print(simple_roman(1))
+print(simple_roman(2))
+print(simple_roman(3))
+print(simple_roman(4))
+print(simple_roman(5))
+print(simple_roman(6))
+print(simple_roman(7))
+print(simple_roman(8))
+print(simple_roman(9))
+print(simple_roman(10))

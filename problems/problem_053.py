@@ -8,10 +8,16 @@
 # of the email address that appears before the @
 #
 # Examples
-#    * input:   "basia@yahoo.com"
+input1 = "basia@yahoo.com"
 #      returns: "basia"
-#    * input:   "basia.farid@yahoo.com"
+input2 = "basia.farid@yahoo.com"
 #      returns: "basia.farid"
-#    * input:   "basia_farid+test@yahoo.com"
+input3 = "basia_farid+test@yahoo.com"
 #      returns: "basia_farid+test"
 
+def user(email):
+    return email.split("@")[0]
+
+print(user(input1))
+print(user(input2))
+print(user(input3))
